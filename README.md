@@ -4,18 +4,25 @@
 
 > The Jam3 shareable config for stylelint.
 
-## Usage
-
-### stylelint-config-jam3
-
-1.  Install the npm package
+## Installation
 
 ```bash
 npm install --save-dev stylelint-config-jam3
 ```
 
-2.  Add "extends": "jam3" to your .stylelintrc
+## Usage
+
+Once installed `stylelint-config-jam3` add it in your `extends` section of your [Stylelint configuration](https://stylelint.io/user-guide/configuration/#extends)
+
+```
+{
+  "extends": "stylelint-config-jam3",
+  "rules": {
+    // ...
+  }
+}
+```
 
 ## Contributing
 
-TBF
+Please ensure you read [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) and [CODE_REVIEW](CODE_REVIEW.md) before start contributing
