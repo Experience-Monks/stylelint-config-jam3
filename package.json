@@ -6,7 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["stylelint", "stylelint-config", "jam3", "styleguide"],
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "jam3",
+    "styleguide",
+    "config",
+    "code",
+    "quality",
+    "lint",
+    "linter",
+    "style",
+    "code style",
+    "strict",
+    "check",
+    "hint",
+    "verify"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jam3/stylelint-config-jam3.git"
