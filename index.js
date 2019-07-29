@@ -16,7 +16,8 @@ module.exports = {
       'return',
       'if',
       'media',
-      'page'
+      'page',
+      'content'
     ],
     'at-rule-no-unknown': [
       true,

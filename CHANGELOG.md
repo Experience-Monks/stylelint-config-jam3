@@ -3,7 +3,7 @@
 ## Launch v0.1.2
 
 - Add performance animation linter
--
+- Whitelist another item for the at-rule
 
 ## Launch v0.1.1
 
