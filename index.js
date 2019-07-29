@@ -2,7 +2,9 @@
 
 module.exports = {
   severity: 'warning',
+  plugins: ['stylelint-performance-animation'],
   rules: {
+    'plugin/no-low-performance-animation': true,
     'at-rule-whitelist': [
       'extend',
       'keyframes',
