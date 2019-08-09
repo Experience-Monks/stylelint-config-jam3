@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-jam3",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Jam3 shareable config for stylelint",
   "main": "index.js",
   "scripts": {
@@ -35,5 +35,8 @@
   "peerDependencies": {
     "stylelint": "^9.0.0"
   },
-  "homepage": "https://github.com/Jam3/stylelint-config-jam3#readme"
+  "homepage": "https://github.com/Jam3/stylelint-config-jam3#readme",
+  "devDependencies": {
+    "stylelint-performance-animation": "1.2.2"
+  }
 }
