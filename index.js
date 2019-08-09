@@ -22,10 +22,9 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['include', 'mixin', 'function', 'return', 'if', 'media']
+        ignoreAtRules: ['function', 'if', 'else', 'for', 'each', 'include', 'mixin', 'return']
       }
     ],
-    'block-no-empty': true,
     'color-no-invalid-hex': true,
     'comment-no-empty': true,
     'declaration-block-no-duplicate-properties': [
@@ -55,7 +54,12 @@ module.exports = {
     'at-rule-name-space-after': 'always-single-line',
     'at-rule-semicolon-newline-after': 'always',
     'block-closing-brace-empty-line-before': 'never',
-    'block-closing-brace-newline-after': 'always',
+    'block-closing-brace-newline-after': [
+      'always',
+      {
+        ignoreAtRules: ['if', 'else']
+      }
+    ],
     'block-closing-brace-newline-before': 'always-multi-line',
     'block-closing-brace-space-before': 'always-single-line',
     'block-opening-brace-newline-after': 'always-multi-line',
@@ -79,7 +83,6 @@ module.exports = {
       }
     ],
     'declaration-bang-space-after': 'never',
-    'declaration-bang-space-before': 'always',
     'declaration-block-semicolon-newline-after': 'always-multi-line',
     'declaration-block-semicolon-space-after': 'always-single-line',
     'declaration-block-semicolon-space-before': 'never',
@@ -126,7 +129,6 @@ module.exports = {
     'selector-pseudo-element-colon-notation': 'double',
     'selector-type-case': 'lower',
     'unit-case': 'lower',
-    'value-list-comma-newline-after': 'always-multi-line',
     'value-list-comma-space-after': 'always-single-line',
     'value-list-comma-space-before': 'never',
     'value-list-max-empty-lines': 0
