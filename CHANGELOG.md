@@ -4,6 +4,8 @@
 
 - Add performance animation linter
 - Whitelist another item for the at-rule
+- Remove unused rules
+- Improve block-closing-brace-newline-after rule
 
 ## Launch v0.1.1
 
