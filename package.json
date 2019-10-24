@@ -36,7 +36,7 @@
     "stylelint": "^9.0.0"
   },
   "homepage": "https://github.com/Jam3/stylelint-config-jam3#readme",
-  "devDependencies": {
+  "dependencies": {
     "stylelint-performance-animation": "1.2.2"
   }
 }
