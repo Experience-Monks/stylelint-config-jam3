@@ -1,0 +1,32 @@
+{
+  "plugins": [
+    "dependencies"
+  ],
+  "rules": {
+    "dependencies/min-vulnerabilities-allow": [
+      "error",
+      {
+        "level": "high"
+      }
+    ],
+    "package-json-properties": [
+      "error",
+      {
+        "required": [
+          "name",
+          "license"
+        ]
+      }
+    ],
+    "root-files": [
+      "error",
+      {
+        "required": [
+          ".gitignore",
+          "README.md",
+          "LICENSE"
+        ]
+      }
+    ]
+  }
+}

@@ -4,7 +4,16 @@
   "description": "Jam3 shareable config for stylelint",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch",
+    "test-ci": "jest --ci && npm run linters",
+    "linters": "npm-run-all -p js-lint adviser-dev",
+    "adviser-dev": "adviser --verbose",
+    "js-lint": "eslint '*.js' --quiet --ignore-pattern .gitignore",
+    "release": "standard-version"
+  },
+  "engines": {
+    "node": ">=10.15.0",
+    "npm": ">=6.5.0"
   },
   "keywords": [
     "stylelint",
@@ -23,6 +32,32 @@
     "hint",
     "verify"
   ],
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "__test__/**/*.js",
+      "!**/node_modules/**"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "__tests__/**/*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo 'Pre-commit checks...' && lint-staged",
+      "pre-push": "echo 'Pre-push checks...' && npm run test-ci",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jam3/stylelint-config-jam3.git"
@@ -38,5 +73,28 @@
   "homepage": "https://github.com/Jam3/stylelint-config-jam3#readme",
   "dependencies": {
     "stylelint-performance-animation": "1.2.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "adviser": "0.7.5",
+    "adviser-plugin-dependencies": "0.4.2",
+    "babel-eslint": "10.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-jam3": "2.0.1",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jest": "23.8.2",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "husky": "4.2.3",
+    "jest": "25.1.0",
+    "lint-staged": "10.0.8",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.19.1",
+    "standard-version": "7.1.0"
   }
 }
