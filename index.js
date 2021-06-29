@@ -5,7 +5,7 @@ module.exports = {
   plugins: ['stylelint-performance-animation'],
   rules: {
     'plugin/no-low-performance-animation': true,
-    'at-rule-whitelist': [
+    'at-rule-allowed-list': [
       'extend',
       'keyframes',
       'import',
