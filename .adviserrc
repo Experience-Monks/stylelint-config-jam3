@@ -6,7 +6,8 @@
     "dependencies/min-vulnerabilities-allow": [
       "error",
       {
-        "level": "high"
+        "level": "high",
+        "skip": ["1654", "1753", "1754"]
       }
     ],
     "package-json-properties": [
