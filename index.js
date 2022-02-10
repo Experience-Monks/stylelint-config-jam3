@@ -17,12 +17,13 @@ module.exports = {
       'if',
       'media',
       'page',
-      'content'
+      'content',
+      'use'
     ],
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['function', 'if', 'else', 'for', 'each', 'include', 'mixin', 'return']
+        ignoreAtRules: ['function', 'if', 'else', 'for', 'each', 'include', 'mixin', 'return', 'use']
       }
     ],
     'color-no-invalid-hex': true,
