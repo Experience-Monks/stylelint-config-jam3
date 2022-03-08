@@ -15,15 +15,17 @@ module.exports = {
       'function',
       'return',
       'if',
+      'else',
       'media',
       'page',
       'content',
-      'use'
+      'use',
+      'error'
     ],
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['function', 'if', 'else', 'for', 'each', 'include', 'mixin', 'return', 'use']
+        ignoreAtRules: ['function', 'if', 'else', 'for', 'each', 'include', 'mixin', 'return', 'use', 'error']
       }
     ],
     'color-no-invalid-hex': true,
