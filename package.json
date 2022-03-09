@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-jam3",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Jam3 shareable config for stylelint",
   "main": "index.js",
   "scripts": {
