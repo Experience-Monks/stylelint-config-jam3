@@ -4,7 +4,21 @@ module.exports = {
   severity: 'warning',
   plugins: ['stylelint-performance-animation'],
   rules: {
-    'plugin/no-low-performance-animation': true,
+    'plugin/no-low-performance-animation': [
+      true,
+      {
+        ignore: [
+          'color',
+          'background-color',
+          'background',
+          'border-color',
+          'fill',
+          'stroke',
+          'stroke-dashoffset',
+          'clip-path'
+        ]
+      }
+    ],
     'at-rule-allowed-list': [
       'extend',
       'keyframes',
@@ -16,16 +30,37 @@ module.exports = {
       'return',
       'if',
       'else',
+      'for',
+      'each',
       'media',
       'page',
       'content',
       'use',
-      'error'
+      'error',
+      'warn',
+      'at-root',
+      'supports'
     ],
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['function', 'if', 'else', 'for', 'each', 'include', 'mixin', 'return', 'use', 'error']
+        ignoreAtRules: [
+          'function',
+          'if',
+          'else',
+          'for',
+          'each',
+          'include',
+          'mixin',
+          'return',
+          'use',
+          'error',
+          'extend',
+          'content',
+          'warn',
+          'at-root',
+          'supports'
+        ]
       }
     ],
     'color-no-invalid-hex': true,
@@ -36,7 +71,12 @@ module.exports = {
         ignore: ['consecutive-duplicates-with-different-values']
       }
     ],
-    'declaration-block-no-redundant-longhand-properties': true,
+    'declaration-block-no-redundant-longhand-properties': [
+      true,
+      {
+        ignoreShorthands: ['grid-template']
+      }
+    ],
     'declaration-block-no-shorthand-property-overrides': true,
     'font-family-no-duplicate-names': true,
     'function-calc-no-unspaced-operator': true,
@@ -46,8 +86,19 @@ module.exports = {
     'no-empty-source': true,
     'no-extra-semicolons': true,
     'no-invalid-double-slash-comments': true,
-    'property-no-unknown': [true, { ignoreProperties: ['user-drag'] }],
-    'selector-pseudo-class-no-unknown': true,
+    'property-no-unknown': [
+      true,
+      {
+        ignoreProperties: ['user-drag', 'composes']
+      }
+    ],
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: ['user-drag', 'global']
+      }
+    ],
+    'named-grid-areas-no-invalid': true,
     'selector-pseudo-element-no-unknown': true,
     'selector-type-no-unknown': true,
     'shorthand-property-no-redundant-values': true,
